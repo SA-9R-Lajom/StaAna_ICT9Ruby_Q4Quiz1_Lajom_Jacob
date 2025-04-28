@@ -1,0 +1,112 @@
+<!DOCTYPE .html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width-device-width, initial-scale=1">
+	<link href="<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css rel="stylesheet">
+
+	<title>Q4 Quiz#1</title>
+
+	<style>
+		body {
+			background-color: 7C98B3;
+			font-family: Typewriter;
+		}
+		.container {
+			display: flex;
+		}
+		.row {
+			background image : linear-gradient(to right, #5876a6, #b8c2c2) ;
+			border-radius: 32 px;
+		}
+		#kg, #met {
+			border-radius: 30px;
+			font-size: 30px;
+			text-align: center;
+		}
+		h1 {
+			font-weight: bolder;
+		}
+		img {
+			margin-top: 122px;
+			height: 400px;
+			width: 400px;
+		}
+		p {
+			color: slategray;
+		}
+		#source {
+			font-size: 12px;
+		}
+		#display {
+			font--size: 32px;
+			border-radius: 32px;
+		}
+
+	</style>
+</head>
+<body>
+	<br>
+	<div class="container">
+
+		<center>
+			<div class="row">
+				<div class="col-md-5 text-center">
+					<br>
+					<img src="https://www.iconfinder.com/icons/3026158/bmi_measure_scale_weight_icon" style="border-inline-color"></div>
+					<div class="col-md-7">
+						<h1>Body Mass Index Calculator</h1>
+						<br><br>
+						<p id="paral"><b style="color: #6e6b67">Body Mass Index (BMI)</b> Categries are standardized classifications used to assess waight status nased on a individual's height and weight, which is measured in kilogram per square meter <i>
+							<kg/m <sup> 2 </sup>./</i></p></kg>
+
+								<br>
+								<details onclick="instructions()">
+									<summary><u>Instructions</u></summary>
+									<i> id="instruct" </i>
+								</details>
+								<br><br>
+
+								<form>
+
+									<input type="number" class="form-control" placeholder="weight in kilogram" id="kg">
+									<kbd id="kgram">Kilogram</kbd>
+
+									<br><br>
+
+									<button type="button" class="btn-btn-warning" onclick="Calculate()" style="border-radius: 30px; font-size:26px;">Calculate BMI</button>
+								</form>
+
+								<br><br>
+							</div>
+							<kbd id="display">Output</kbd>
+						</div>
+
+						<br>
+						<p id= "source">Source: https://www.cancer.org/cancer/risk-prevention/diet-physical-activity/body-weight-and-cancer-risk/body-mass-index-bmi-calculator.html</p>
+
+						<hr>
+						<p>Jacob Lajom</p>
+						</center>
+					</div>
+
+					<script>
+						function instructions() {
+							document.getElementById("instruct").innerHTML= "Enter your height and weight to be able to calculate your Body Mass Index (BMI)";
+						}
+
+						FUNCTION Calculate() {
+							function Calculate() 
+							var weight = document.getElementById("kg").value; //get value from 1st input 
+							var height = document.getElementById("met").value; //get value from 2nd input 
+							var BMI = (weight / Math.pow(height, 2)).toFixed(1); //use the BMI formula; use Math.pow to square the height and toFixed to set the decimal to 1.
+							 //use conditional statement to determin the BMI category 
+							if(BMI < 18.5){ document.getElementById("display").innerHTML = "<b style='color: yellow;'>BMI : " + BMI + "</b> | You are underweight. Eat more!"; }
+						     else if(BMI >= 18.5 && BMI <= 24.9){ document.getElementById("display").innerHTML = "<b style='color: yellow;'>BMI : " + BMI + "</b> | Your weight is normal. Keep it like that."; } 
+						     else if(BMI >= 25 && BMI <= 29.9){ document.getElementById("display").innerHTML = "<b style='color: yellow;'>BMI : " + BMI + "</b> | You are overweight. Watch your food."; } 
+						     else if(weight === "" || height === "" ){ document.getElementById("display").innerHTML = "Please enter values"; }
+						     else{ document.getElementById("display").innerHTML = "<b style='color: yellow;'>BMI : " + BMI + "</b> | You are obese. No comment."; } 
+						 }
+						 </body>
+						 </html>
+						
